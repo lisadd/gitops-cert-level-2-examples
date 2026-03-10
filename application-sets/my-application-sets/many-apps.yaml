@@ -14,21 +14,21 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      The project the application belongs to.
+      # The project the application belongs to.
       project: default
 
-      Source of the application manifests
+      # Source of the application manifests
       source:
         repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
         targetRevision: HEAD
         path: '{{path}}'
       
-      Destination cluster and namespace to deploy the application
+      # Destination cluster and namespace to deploy the application
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{path.basename}}'
 
-      Sync policy
+      # Sync policy
       syncPolicy:
         syncOptions:
           - CreateNamespace=true  
